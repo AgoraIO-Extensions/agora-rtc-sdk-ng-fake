@@ -1,1 +1,1 @@
-# fake-agora-rtc
+# agora-rtc-sdk-ng-fake

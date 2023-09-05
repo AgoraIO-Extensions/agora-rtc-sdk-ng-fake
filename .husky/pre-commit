@@ -6,7 +6,7 @@ npx lint-staged --allow-empty
 if command -v gitleaks >/dev/null 2>&1;
  then
   echo "gitleaks found, proceeding..."
-  gitleaks protect --staged --source . -v fake-agora-rtc.git -c .gitleaks.toml
+  gitleaks protect --staged --source . -v agora-rtc-sdk-ng-fake.git -c .gitleaks.toml
  else
   echo "gitleaks not found, skip"
  fi

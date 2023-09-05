@@ -1,14 +1,14 @@
 {
-  "name": "fake-agora-rtc",
-  "version": "0.0.0",
+  "name": "agora-rtc-sdk-ng-fake",
+  "version": "1.0.0",
   "private": true,
-  "description": "Fake Agora RTC for testing",
+  "description": "Fake Agora Web RTC for testing",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AgoraIO-Extensions/fake-agora-rtc.git"
+    "url": "https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake.git"
   },
   "bugs": {
-    "url": "https://github.com/AgoraIO-Extensions/fake-agora-rtc/issues"
+    "url": "https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/issues"
   },
   "main": "src/index.ts",
   "scripts": {
@@ -105,7 +105,7 @@
     },
     "plugins": {
       "@release-it/conventional-changelog": {
-        "header": "# fake-agora-rtc",
+        "header": "# agora-rtc-sdk-ng-fake",
         "preset": {
           "name": "conventionalcommits",
           "types": [
