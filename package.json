@@ -97,6 +97,9 @@
       "requireCleanWorkingDir": false,
       "tagName": "v${version}"
     },
+    "hooks": {
+      "before:init": "git fetch --prune --prune-tags origin"
+    },
     "npm": {
       "allowSameVersion": true
     },
