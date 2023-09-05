@@ -18,22 +18,22 @@ use [publish actions](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fak
 agora-rtc-sdk-ng-fake
 ├─ src
 │  ├─ tracks
-│  │  ├─ camera-video-track.ts // FakeCameraVideoTrack (模拟ICameraVideoTrack)
-│  │  ├─ index.ts  //入口文件
-│  │  ├─ local-audio-track.ts // FakeLocalAudioTrack (模拟ILocalAudioTrack)
-│  │  ├─ local-track.ts // FakeLocalTrack (模拟ILocalTrack)
-│  │  ├─ local-video-track.ts // FakeLocalVideoTrack (模拟ILocalVideoTrack)
-│  │  ├─ microphone-audio-track.ts // FakeMicrophoneAudioTrack (模拟IMicrophoneAudioTrack)
-│  │  ├─ remote-audio-track.ts // FakeRemoteAudioTrack (模拟IRemoteAudioTrack)
-│  │  ├─ remote-track.ts // FakeRemoteTrack (模拟IRemoteTrack)
-│  │  ├─ remote-video-track.ts // FakeRemoteVideoTrack (模拟IRemoteVideoTrack)
-│  │  └─ track.ts // FakeTrack (模拟ITrack)
-│  ├─ client.ts // FakeRTCClient(模拟AgoraRTC)
-│  ├─ eventemitter.ts // FakeRTCClient(模拟webSDK事件)
-│  ├─ index.ts  //入口文件
-│  ├─ utils.ts  //工具
-│  ├─ version.ts //package版本
-├─ tsup.config.ts //构建配置
-└─ vite.config.ts //vitest单元测试配置
+│  │  ├─ camera-video-track.ts // FakeCameraVideoTrack (mock ICameraVideoTrack)
+│  │  ├─ index.ts  //entry
+│  │  ├─ local-audio-track.ts // FakeLocalAudioTrack (mock ILocalAudioTrack)
+│  │  ├─ local-track.ts // FakeLocalTrack (mock ILocalTrack)
+│  │  ├─ local-video-track.ts // FakeLocalVideoTrack (mock ILocalVideoTrack)
+│  │  ├─ microphone-audio-track.ts // FakeMicrophoneAudioTrack (mock IMicrophoneAudioTrack)
+│  │  ├─ remote-audio-track.ts // FakeRemoteAudioTrack (mock IRemoteAudioTrack)
+│  │  ├─ remote-track.ts // FakeRemoteTrack (mock IRemoteTrack)
+│  │  ├─ remote-video-track.ts // FakeRemoteVideoTrack (mock IRemoteVideoTrack)
+│  │  └─ track.ts // FakeTrack (mock ITrack)
+│  ├─ client.ts // FakeRTCClient(mock AgoraRTC)
+│  ├─ eventemitter.ts // FakeRTCClient(mock webSDK event handler)
+│  ├─ index.ts  //entry
+│  ├─ utils.ts  // utils
+│  ├─ version.ts //package version
+├─ tsup.config.ts //build config
+└─ vite.config.ts //vitest unit test config
 
 ```
