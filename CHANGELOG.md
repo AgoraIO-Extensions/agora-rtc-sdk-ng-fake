@@ -1,5 +1,8 @@
 # agora-rtc-sdk-ng-fake
 
+- feat: add default export (2298832)
+- docs: update readme (4379382)
+
 ## 1.0.0 (2023-09-05)
 
 ### Features
