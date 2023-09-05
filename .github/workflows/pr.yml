@@ -1,0 +1,37 @@
+on: ["pull_request"]
+
+name: Test PR
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+
+    permissions:
+      # Required to checkout the code
+      contents: read
+      # Required to put a comment into the pull-request
+      pull-requests: write
+
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Setup 🛠️
+        uses: ./.github/actions/setup
+
+      - name: Test 🧪
+        run: |
+          pnpm install
+          pnpm run lint
+          pnpm run test
+          pnpm run build
+
+      - name: Report Coverage for fake-agora-rtc 🟢
+        if: always() # Also generate the report if tests are failing
+        uses: davelosert/vitest-coverage-report-action@v1.4.0
+        with:
+          working-directory: "./src"

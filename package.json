@@ -1,0 +1,130 @@
+{
+  "name": "fake-agora-rtc",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Fake Agora RTC for testing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AgoraIO-Extensions/fake-agora-rtc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AgoraIO-Extensions/fake-agora-rtc/issues"
+  },
+  "main": "src/index.ts",
+  "scripts": {
+    "prepare": "husky install",
+    "build": "tsup",
+    "test": "vitest --coverage",
+    "test:watch": "vitest --ui",
+    "lint": "eslint --ext .ts,.tsx . && prettier --check .",
+    "lint:fix": "eslint --fix --ext .ts,.tsx . && prettier --write .",
+    "release": "release-it"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@commitlint/config-conventional": "^17.6.7",
+    "@hyrious/esbuild-dev": "^0.10.4",
+    "@ngneat/falso": "^6.4.0",
+    "@release-it/conventional-changelog": "^7.0.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^20.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@vitest/coverage-v8": "^0.34.1",
+    "@vitest/ui": "^0.34.3",
+    "agora-rtc-sdk-ng": "4.18.2",
+    "commitlint": "^17.6.7",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "jsdom": "^22.1.0",
+    "tsup": "^7.1.0",
+    "lint-staged": "^14.0.0",
+    "markdown-it": "^13.0.1",
+    "minimist": "^1.2.8",
+    "prettier": "^2.8.8",
+    "release-it": "^16.1.3",
+    "side-effect-manager": "^1.2.2",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.2",
+    "vitest": "^0.34.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "cross-env NODE_ENV=development eslint --cache"
+    ],
+    "*.json,.{eslintrc,prettierrc}": [
+      "prettier --ignore-path .eslintignore --parser json --write"
+    ],
+    "*.{css,scss}": [
+      "prettier --ignore-path .eslintignore --write"
+    ],
+    "*.{html,md,mdx,yml}": [
+      "prettier --ignore-path .eslintignore --write"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "rollup",
+        "esbuild"
+      ]
+    },
+    "//": "https://github.com/AgoraIO/Tools/issues/304",
+    "overrides": {
+      "nodeunit": "npm:noop-package@1.0.0"
+    }
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "requireCleanWorkingDir": false,
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "allowSameVersion": true
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "header": "# fake-agora-rtc",
+        "preset": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            },
+            {
+              "type": "docs",
+              "section": "Documentation"
+            }
+          ]
+        },
+        "infile": "CHANGELOG.md"
+      }
+    }
+  }
+}

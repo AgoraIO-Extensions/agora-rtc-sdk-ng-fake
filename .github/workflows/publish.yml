@@ -1,0 +1,69 @@
+name: Publish to NPM
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish-npm:
+        description: "choose true if want publish to npm"
+        default: false
+        type: boolean
+
+jobs:
+  release-it:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Setup Dependencies 💚
+        run: |
+          pnpm install
+
+      - name: Zip It Up 🤐
+        run: |
+          pnpm build
+          zip -r fake-agora-rtc.zip dist
+
+      - name: Upload Artifact ⬆️
+        uses: actions/upload-artifact@v3
+        with:
+          name: fake-agora-rtc.zip
+          path: fake-agora-rtc.zip
+
+      - name: Setup NPM auth token
+        if: ${{ inputs.publish-npm }}
+        run: |
+          npm set "//registry.npmjs.org/:_authToken" ${{ secrets.NPM_TOKEN }}
+
+      - name: Config Git
+        run: |
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
+
+      - name: Get Package Info
+        id: package-info
+        run: |
+          version=$(node -p "require('./package.json').version")
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
+
+      - name: Update VERSION
+        run: |
+          pnpm exec esbuild-dev $PWD/scripts/release/update-version.ts @${{ steps.package-info.outputs.version }}
+
+      - name: Release and Publish
+        run: |
+          pnpm release ${{ inputs.increment }} --ci --npm.publish=${{ inputs.publish-npm }}
+
+      - name: Upload Doc Archive to GitHub release ⬆️
+        if: github.event.release
+        uses: svenstaro/upload-release-action@2.6.0
+        with:
+          file: fake-agora-rtc.zip
+          asset_name: fake-agora-rtc.zip
