@@ -1,6 +1,10 @@
 # agora-rtc-sdk-ng-fake
 
+- Update publish.yml (934af34)
+- chore: release 1.0.0 (a98db50)
 - chore: ci (86eb463)
+
+* chore: ci (86eb463)
 
 ## 1.0.0 (2023-10-13)
 
