@@ -59,4 +59,4 @@ jobs:
 
       - name: Release and Publish
         run: |
-          pnpm release ${{ steps.package-info.outputs.version }} --ci --npm.publish=${{ inputs.publish-npm }} --github.update --github.assets=[agora-rtc-sdk-ng-fake.zip,dist/fake-agora-rtc.js]
+          pnpm release ${{ steps.package-info.outputs.version }} --ci --npm.publish=${{ inputs.publish-npm }} --github.update --github.assets=["agora-rtc-sdk-ng-fake.zip","dist/fake-agora-rtc.js"]

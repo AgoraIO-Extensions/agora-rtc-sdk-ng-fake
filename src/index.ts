@@ -7,7 +7,7 @@ export * from "./eventemitter";
 export * from "./client";
 export * from "./version";
 
-export const FakeAgoraRTC = createFakeAgoraRTC({
+const FakeAgoraRTC = createFakeAgoraRTC({
   setAppType(): void {
     //
   },
@@ -15,5 +15,13 @@ export const FakeAgoraRTC = createFakeAgoraRTC({
   createCameraVideoTrack: async () => FakeCameraVideoTrack.create(),
   createClient: () => FakeRTCClient.create(),
 });
+
+export function getFakeAgoraRTC() {
+  return FakeAgoraRTC;
+}
+
+export const FakeAgoraRTCWrapper = {
+  getFakeAgoraRTC: getFakeAgoraRTC,
+};
 
 export default FakeAgoraRTC;
