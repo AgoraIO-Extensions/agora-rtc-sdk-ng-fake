@@ -1,16 +1,28 @@
 # agora-rtc-sdk-ng-fake
 
+- chore(deps-dev): bump get-func-name from 2.0.0 to 2.0.2 (#1) (27ed3d3)
+- chore(deps-dev): bump postcss from 8.4.29 to 8.4.31 (#2) (9e34fc1)
+- Merge pull request #3 from AgoraIO-Extensions/dev/export-FakeAgoraRTC (fe5c5b7)
+- chore: fix ci issue (76f89b9)
+- feat: watch mode (35d5b76)
+- chore: release 1.0.0 (001e78a)
 - Update publish.yml (17e89f9)
 - chore: release 1.0.0 (fbe4d07)
 - Update publish.yml (934af34)
 - chore: release 1.0.0 (a98db50)
 - chore: ci (86eb463)
 
+* Update publish.yml (17e89f9)
+* chore: release 1.0.0 (fbe4d07)
 * Update publish.yml (934af34)
 * chore: release 1.0.0 (a98db50)
 * chore: ci (86eb463)
 
+- Update publish.yml (934af34)
+- chore: release 1.0.0 (a98db50)
 - chore: ci (86eb463)
+
+* chore: ci (86eb463)
 
 ## 1.0.0 (2023-10-13)
 
