@@ -1,5 +1,7 @@
 # agora-rtc-sdk-ng-fake
 
+- chore: ci (86eb463)
+
 ## 1.0.0 (2023-10-13)
 
 ### Features
