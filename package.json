@@ -12,6 +12,7 @@
   },
   "main": "src/index.ts",
   "scripts": {
+    "start": "tsup src/index.ts --watch",
     "prepare": "husky install",
     "build": "tsup",
     "test": "vitest --coverage",
