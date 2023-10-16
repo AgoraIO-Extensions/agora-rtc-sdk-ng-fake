@@ -23,12 +23,20 @@ export default defineConfig([
         js: banner,
       };
     },
-    format: ["cjs", "esm"],
-    splitting: false,
+    outExtension: () => {
+      return {
+        js: `.js`,
+      };
+    },
+    format: ["iife"],
     sourcemap: false,
+    splitting: false,
     clean: true,
-    treeshake: true,
-    dts: true,
     minify: false,
+    define: {
+      "process.env.NODE_ENV": JSON.stringify("production"),
+    },
+    globalName: "AgoraRTCFake",
+    platform: "browser",
   },
 ]);
