@@ -36,7 +36,7 @@ export default defineConfig([
     define: {
       "process.env.NODE_ENV": JSON.stringify("production"),
     },
-    globalName: "AgoraRTCFake",
+    globalName: "FakeAgoraRTCWrapper",
     platform: "browser",
   },
 ]);

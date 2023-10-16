@@ -24,4 +24,4 @@ export const FakeAgoraRTCWrapper = {
   getFakeAgoraRTC: getFakeAgoraRTC,
 };
 
-export default FakeAgoraRTC;
+export default FakeAgoraRTCWrapper;
