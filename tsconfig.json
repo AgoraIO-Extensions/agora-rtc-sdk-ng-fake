@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "noEmit": true,
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,

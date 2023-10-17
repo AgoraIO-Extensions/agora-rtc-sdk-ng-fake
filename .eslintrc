@@ -6,7 +6,8 @@
     "plugin:prettier/recommended"
   ],
   "env": {
-    "browser": true
+    "browser": true,
+    "node": true
   },
   "plugins": ["@typescript-eslint", "prettier", "import"],
   "root": true,
@@ -42,6 +43,7 @@
         }
       }
     ],
+    "@typescript-eslint/no-var-requires": 0,
     "sort-imports": [
       "error",
       {

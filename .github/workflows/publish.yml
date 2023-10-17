@@ -29,13 +29,13 @@ jobs:
       - name: Zip It Up 🤐
         run: |
           pnpm build
-          zip -r agora-rtc-sdk-ng-fake.zip dist
+          tar -czvf agora-rtc-sdk-ng-fake.tar.gz dist
 
       - name: Upload Artifact ⬆️
         uses: actions/upload-artifact@v3
         with:
-          name: agora-rtc-sdk-ng-fake.zip
-          path: agora-rtc-sdk-ng-fake.zip
+          name: agora-rtc-sdk-ng-fake.tar.gz
+          path: agora-rtc-sdk-ng-fake.tar.gz
 
       - name: Setup NPM auth token
         if: ${{ inputs.publish-npm }}
@@ -59,4 +59,4 @@ jobs:
 
       - name: Release and Publish
         run: |
-          pnpm release ${{ steps.package-info.outputs.version }} --ci --npm.publish=${{ inputs.publish-npm }} --github.update --github.assets=dist/agora-rtc-sdk-ng-fake.js
+          pnpm release ${{ steps.package-info.outputs.version }} --ci --npm.publish=${{ inputs.publish-npm }} --github.update --github.assets=agora-rtc-sdk-ng-fake.tar.gz
