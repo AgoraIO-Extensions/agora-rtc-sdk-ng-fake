@@ -40,7 +40,7 @@ const FakeAgoraRTC = createFakeAgoraRTC({
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
   createScreenVideoTrack(
-    config: ScreenVideoTrackInitConfig,
+    _config: ScreenVideoTrackInitConfig,
     withAudio?: "enable" | "disable" | "auto",
   ): Promise<[ILocalVideoTrack, ILocalAudioTrack] | ILocalVideoTrack> {
     // 根据参数返回视频轨 或 [视频轨,音频轨]

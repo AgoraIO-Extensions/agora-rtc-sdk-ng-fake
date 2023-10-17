@@ -23,9 +23,26 @@ export default defineConfig([
         js: banner,
       };
     },
+    format: ["cjs", "esm"],
+    splitting: false,
+    sourcemap: false,
+    clean: true,
+    treeshake: true,
+    dts: true,
+    minify: false,
+  },
+  {
+    entry: {
+      [pkg.name]: "src/index.ts",
+    },
+    banner: () => {
+      return {
+        js: banner,
+      };
+    },
     outExtension: () => {
       return {
-        js: `.js`,
+        js: `.iife.js`,
       };
     },
     format: ["iife"],

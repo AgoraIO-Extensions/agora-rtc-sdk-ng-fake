@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 overrides:
   nodeunit: npm:noop-package@1.0.0
 
@@ -53,6 +49,9 @@ devDependencies:
   dotenv:
     specifier: ^16.3.1
     version: 16.3.1
+  esbuild-plugin-umd-wrapper:
+    specifier: ^1.0.7
+    version: 1.0.7
   eslint:
     specifier: ^8.44.0
     version: 8.44.0
@@ -2403,6 +2402,10 @@ packages:
       is-callable: 1.2.7
       is-date-object: 1.0.5
       is-symbol: 1.0.4
+    dev: true
+
+  /esbuild-plugin-umd-wrapper@1.0.7:
+    resolution: {integrity: sha512-Jo1S3rczXupUzPGt4eXF643FF/J7nDkwwwHH2PS6ic1l0ye7kTS0plAJQoD9u349ybLyt4wyG9fFa/RCuI2dXw==}
     dev: true
 
   /esbuild@0.18.20:
@@ -6402,3 +6405,7 @@ packages:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
