@@ -17,7 +17,7 @@ let config = {
       type: "umd",
       umdNamedDefine: true,
     },
-    filename: `iris-web-rtc-fake_${pkg.version}.js`,
+    filename: `${pkg.name}_${pkg.version}.js`,
     globalObject: "this",
     environment: {
       arrowFunction: false,
