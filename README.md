@@ -33,7 +33,7 @@ agora-rtc-sdk-ng-fake
 │  ├─ index.ts  //entry
 │  ├─ utils.ts  // utils
 │  ├─ version.ts //package version
-├─ tsup.config.ts //build config
+├─ webpack.config.ts //build config
 └─ vite.config.ts //vitest unit test config
 
 ```
