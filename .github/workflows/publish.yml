@@ -37,7 +37,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          pnpm publish
+          pnpm publish --no-git-checks
         working-directory: dist
 
       - name: Upload Artifact ⬆️
