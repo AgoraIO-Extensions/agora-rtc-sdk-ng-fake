@@ -1,5 +1,11 @@
 # agora-rtc-sdk-ng-fake
 
+## [1.0.2](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.1...v1.0.2) (2023-10-19)
+
+### Features
+
+- set publicPath to '' ([#8](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/issues/8)) ([3ae18a1](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/commit/3ae18a1e29a2ceecce837db6a801eca7012e6e42))
+
 ## 1.0.1 (2023-10-17)
 
 ### Features
