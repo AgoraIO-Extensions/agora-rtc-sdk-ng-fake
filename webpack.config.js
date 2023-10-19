@@ -10,6 +10,7 @@ const environment = process.env.NODE_ENV;
 let config = {
   entry: "./src/index.ts",
   output: {
+    publicPath: "",
     path: path.resolve(__dirname, "dist"),
     libraryTarget: "umd",
     library: {
