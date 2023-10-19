@@ -1,5 +1,7 @@
 # agora-rtc-sdk-ng-fake
 
+## [1.0.4](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.2...v1.0.4) (2023-10-19)
+
 ## 1.0.2 (2023-10-19)
 
 ### Features

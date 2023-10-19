@@ -2,11 +2,6 @@ name: Release and Publish
 
 on:
   workflow_dispatch:
-    inputs:
-      publish-npm:
-        description: "choose true if want publish to npm"
-        default: false
-        type: boolean
 
 jobs:
   release-it:
@@ -19,8 +14,17 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup
-        uses: ./.github/actions/setup
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: latest
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          cache: "pnpm"
+          registry-url: "https://npm.pkg.github.com"
+          # Defaults to the user or organization that owns the workflow file
+          scope: "@agoraio-extensions"
 
       - name: Setup Dependencies 💚
         run: |
@@ -30,6 +34,13 @@ jobs:
         run: |
           pnpm build
           tar -czvf agora-rtc-sdk-ng-fake.tar.gz dist
+
+      - name: publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd dist
+          npm publish --no-git-checks
 
       - name: Upload Artifact ⬆️
         uses: actions/upload-artifact@v3
@@ -59,4 +70,4 @@ jobs:
 
       - name: Release and Publish
         run: |
-          pnpm release ${{ steps.package-info.outputs.version }} --ci --npm.publish=${{ inputs.publish-npm }} --github.assets=agora-rtc-sdk-ng-fake.tar.gz
+          pnpm release ${{ steps.package-info.outputs.version }} --ci --github.assets=agora-rtc-sdk-ng-fake.tar.gz

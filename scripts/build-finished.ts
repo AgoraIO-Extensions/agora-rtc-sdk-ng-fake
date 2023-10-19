@@ -6,10 +6,13 @@ const pkg = require("../package.json");
 const distDir = "dist";
 
 const packageData = {
-  name: "agora-rtc-sdk-ng-fake",
-  version: "1.0.0",
+  name: `${pkg.name}`,
+  version: `${pkg.version}`,
   description: "Fake Agora Web RTC for testing",
   main: `${pkg.name}_${pkg.version}.js`,
+  publishConfig: {
+    registry: "https://npm.pkg.github.com",
+  },
 };
 
 const packagePath = path.join(distDir, "package.json");
