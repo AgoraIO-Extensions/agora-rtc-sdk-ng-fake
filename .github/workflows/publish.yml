@@ -16,7 +16,7 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
-          
+
       - uses: pnpm/action-setup@v2.2.4
         with:
           version: latest
@@ -42,8 +42,8 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          cd dist
           npm publish --no-git-checks
-        working-directory: dist
 
       - name: Upload Artifact ⬆️
         uses: actions/upload-artifact@v3
