@@ -1,5 +1,11 @@
 # agora-rtc-sdk-ng-fake
 
+## [1.0.5](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.2...v1.0.5) (2023-10-22)
+
+### Features
+
+- add some functions ([#10](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/issues/10)) ([8635a41](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/commit/8635a412ba4272f378bb885c5ef6c9d7ad99241b))
+
 ## [1.0.4](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.2...v1.0.4) (2023-10-19)
 
 ## 1.0.2 (2023-10-19)
