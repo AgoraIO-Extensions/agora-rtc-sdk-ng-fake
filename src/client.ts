@@ -1,5 +1,6 @@
 import { randNumber, randUuid } from "@ngneat/falso";
 import type {
+  ClientRole,
   IAgoraRTCClient,
   IAgoraRTCRemoteUser,
   IRemoteAudioTrack,
@@ -13,8 +14,13 @@ import { FakeAgoraEventEmitter } from "./eventemitter";
 import { FakeRemoteAudioTrack, FakeRemoteVideoTrack } from "./tracks";
 import { hideProperties } from "./utils";
 
+export const FAKE_CHANNEL_NAME = "AGORA-RTC-SDK-NG-FAKE-CHANNEL";
+
 export class FakeRTCClient extends FakeAgoraEventEmitter {
   remoteUsers: IAgoraRTCRemoteUser[] = [];
+  uid?: UID;
+  channelName?: string;
+  role?: ClientRole;
 
   public static create(
     executor?: Partial<IAgoraRTCClient> | ((client: FakeRTCClient) => Partial<IAgoraRTCClient>),
@@ -129,10 +135,39 @@ export class FakeRTCClient extends FakeAgoraEventEmitter {
   }
 
   public join(): Promise<UID> {
-    return Promise.resolve(randUuid());
+    this.uid = randUuid();
+    this.channelName = FAKE_CHANNEL_NAME;
+    return Promise.resolve(this.uid);
+  }
+
+  public async publish(): Promise<void> {
+    return Promise.resolve();
+  }
+
+  public async unpublish(): Promise<void> {
+    return Promise.resolve();
   }
 
   public leave(): Promise<void> {
+    this.uid = undefined;
+    this.channelName = undefined;
     return Promise.resolve();
+  }
+
+  public setClientRole(): Promise<void> {
+    this.role = "host";
+    return Promise.resolve();
+  }
+
+  public renewToken(): Promise<void> {
+    return Promise.resolve();
+  }
+
+  public getLocalAudioStats(): void {
+    //
+  }
+
+  public getRemoteAudioStats(): void {
+    //
   }
 }

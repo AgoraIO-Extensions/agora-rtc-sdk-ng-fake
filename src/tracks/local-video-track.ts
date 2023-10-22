@@ -72,6 +72,10 @@ export class FakeLocalVideoTrack extends FakeLocalTrack {
     }
   }
 
+  public setEncoderConfiguration(): Promise<void> {
+    return Promise.resolve();
+  }
+
   protected _config?: VideoPlayerConfig;
   protected _videoEl?: HTMLVideoElement;
 }
