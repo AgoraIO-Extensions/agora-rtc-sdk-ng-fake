@@ -124,6 +124,14 @@ export class FakeLocalAudioTrack extends FakeLocalTrack {
     console.log("[FakeLocalAudioTrack]: setPlaybackDevice", deviceId);
   }
 
+  public startProcessAudioBuffer(): void {
+    //
+  }
+
+  public stopProcessAudioBuffer(): void {
+    //
+  }
+
   private _audioEl?: HTMLAudioElement;
   private _volume: number;
 }

@@ -14,6 +14,8 @@ export * from "./eventemitter";
 export * from "./client";
 export * from "./version";
 
+export const FAKE_VIDEOINPUT_DEVICE_ID = "1";
+
 const FakeAgoraRTC = createFakeAgoraRTC({
   setAppType(): void {
     //
@@ -29,11 +31,33 @@ const FakeAgoraRTC = createFakeAgoraRTC({
   },
   getCameras(): Promise<MediaDeviceInfo[]> {
     //todo
-    return Promise.resolve([]);
+    return Promise.resolve([
+      {
+        kind: "videoinput",
+        deviceId: "1",
+        label: "1",
+      },
+    ] as MediaDeviceInfo[]);
   },
   getDevices(): Promise<MediaDeviceInfo[]> {
     //todo
-    return Promise.resolve([]);
+    return Promise.resolve([
+      {
+        kind: "videoinput",
+        deviceId: FAKE_VIDEOINPUT_DEVICE_ID,
+        label: "1",
+      },
+      {
+        kind: "audiooutput",
+        deviceId: "2",
+        label: "2",
+      },
+      {
+        kind: "audioinput",
+        deviceId: "3",
+        label: "3",
+      },
+    ] as MediaDeviceInfo[]);
   },
   createMicrophoneAudioTrack: async () => FakeMicrophoneAudioTrack.create(),
   createCameraVideoTrack: async () => FakeCameraVideoTrack.create(),
