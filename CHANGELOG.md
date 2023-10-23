@@ -1,5 +1,11 @@
 # agora-rtc-sdk-ng-fake
 
+## [1.0.6](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.5...v1.0.6) (2023-10-23)
+
+### Features
+
+- add startProcessAudioBuffer stopProcessAudioBuffer ([#11](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/issues/11)) ([0fc344b](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/commit/0fc344b72e08533677b745ca21386c59e690f74c))
+
 ## [1.0.5](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.2...v1.0.5) (2023-10-22)
 
 ### Features
