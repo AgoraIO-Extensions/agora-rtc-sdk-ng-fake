@@ -1,5 +1,11 @@
 # agora-rtc-sdk-ng-fake
 
+## [1.0.8](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.7...v1.0.8) (2023-12-19)
+
+### Features
+
+- add AgoraRTC.setParameter ([6f3dc6a](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/commit/6f3dc6ae63f646ff928fa26a828a5a60f2d9b6c0))
+
 ## [1.0.7](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.6...v1.0.7) (2023-12-19)
 
 ### Features
