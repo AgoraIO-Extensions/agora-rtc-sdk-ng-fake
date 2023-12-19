@@ -30,10 +30,6 @@ export class FakeRTCClient extends FakeAgoraEventEmitter {
     return Object.assign(client, partialClient) as unknown as IAgoraRTCClient;
   }
 
-  public static setParameter(): void {
-    //
-  }
-
   private _sideEffect = new SideEffectManager();
 
   public constructor() {

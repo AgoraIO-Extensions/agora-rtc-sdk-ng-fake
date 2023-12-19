@@ -1,6 +1,6 @@
 {
   "name": "@agoraio-extensions/agora-rtc-sdk-ng-fake",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "private": true,
   "description": "Fake Agora Web RTC for testing",
   "repository": {

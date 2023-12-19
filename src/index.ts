@@ -20,6 +20,9 @@ const FakeAgoraRTC = createFakeAgoraRTC({
   setAppType(): void {
     //
   },
+  setParameter(): void {
+    //
+  },
   setArea(): void {
     //
   },
