@@ -1,5 +1,11 @@
 # agora-rtc-sdk-ng-fake
 
+## [1.0.9](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.8...v1.0.9) (2024-01-31)
+
+### Features
+
+- add client.sendStreamMessage ([e779e3e](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/commit/e779e3e8a302b80a921376a59d8715e5045312af))
+
 ## [1.0.8](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.7...v1.0.8) (2023-12-19)
 
 ### Features
