@@ -134,7 +134,15 @@ export class FakeRTCClient extends FakeAgoraEventEmitter {
     });
   }
 
-  public join(): Promise<UID> {
+  public join(
+    appid: string,
+    channel: string,
+    token: string | null,
+    uid?: UID | null,
+  ): Promise<UID> {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    //@ts-ignore websdk的私有属性
+    this.isStringUID = typeof uid === "string";
     this.uid = randUuid();
     this.channelName = FAKE_CHANNEL_NAME;
     return Promise.resolve(this.uid);
