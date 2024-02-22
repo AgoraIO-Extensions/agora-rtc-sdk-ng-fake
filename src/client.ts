@@ -135,9 +135,9 @@ export class FakeRTCClient extends FakeAgoraEventEmitter {
   }
 
   public join(
-    appid: string,
-    channel: string,
-    token: string | null,
+    _appid: string,
+    _channel: string,
+    _token: string | null,
     uid?: UID | null,
   ): Promise<UID> {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
