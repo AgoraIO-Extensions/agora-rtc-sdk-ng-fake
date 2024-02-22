@@ -1,5 +1,11 @@
 # agora-rtc-sdk-ng-fake
 
+## [1.0.10](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.9...v1.0.10) (2024-02-22)
+
+### Features
+
+- support string uid fake test ([6d10b6a](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/commit/6d10b6ab5497a5d4adf89c929a3d10b54df4019a))
+
 ## [1.0.9](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.8...v1.0.9) (2024-01-31)
 
 ### Features
