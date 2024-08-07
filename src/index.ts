@@ -15,6 +15,8 @@ export * from "./client";
 export * from "./version";
 
 export const FAKE_VIDEOINPUT_DEVICE_ID = "1";
+export const FAKE_PLAYBACKINPUT_DEVICE_ID = "2";
+export const FAKE_RECORDINGINPUT_DEVICE_ID = "3";
 
 const FakeAgoraRTC = createFakeAgoraRTC({
   setAppType(): void {
@@ -33,32 +35,48 @@ const FakeAgoraRTC = createFakeAgoraRTC({
     //
   },
   getCameras(): Promise<MediaDeviceInfo[]> {
-    //todo
-    return Promise.resolve([
-      {
-        kind: "videoinput",
-        deviceId: "1",
-        label: "1",
-      },
-    ] as MediaDeviceInfo[]);
-  },
-  getDevices(): Promise<MediaDeviceInfo[]> {
-    //todo
     return Promise.resolve([
       {
         kind: "videoinput",
         deviceId: FAKE_VIDEOINPUT_DEVICE_ID,
-        label: "1",
+        label: FAKE_VIDEOINPUT_DEVICE_ID,
+      },
+    ] as MediaDeviceInfo[]);
+  },
+  getMicrophones(): Promise<MediaDeviceInfo[]> {
+    return Promise.resolve([
+      {
+        kind: "audioinput",
+        deviceId: FAKE_RECORDINGINPUT_DEVICE_ID,
+        label: FAKE_RECORDINGINPUT_DEVICE_ID,
+      },
+    ] as MediaDeviceInfo[]);
+  },
+  getPlaybackDevices(): Promise<MediaDeviceInfo[]> {
+    return Promise.resolve([
+      {
+        kind: "audiooutput",
+        deviceId: FAKE_PLAYBACKINPUT_DEVICE_ID,
+        label: FAKE_PLAYBACKINPUT_DEVICE_ID,
+      },
+    ] as MediaDeviceInfo[]);
+  },
+  getDevices(): Promise<MediaDeviceInfo[]> {
+    return Promise.resolve([
+      {
+        kind: "videoinput",
+        deviceId: FAKE_VIDEOINPUT_DEVICE_ID,
+        label: FAKE_VIDEOINPUT_DEVICE_ID,
       },
       {
         kind: "audiooutput",
-        deviceId: "2",
-        label: "2",
+        deviceId: FAKE_PLAYBACKINPUT_DEVICE_ID,
+        label: FAKE_PLAYBACKINPUT_DEVICE_ID,
       },
       {
         kind: "audioinput",
-        deviceId: "3",
-        label: "3",
+        deviceId: FAKE_RECORDINGINPUT_DEVICE_ID,
+        label: FAKE_RECORDINGINPUT_DEVICE_ID,
       },
     ] as MediaDeviceInfo[]);
   },
