@@ -1,5 +1,11 @@
 # agora-rtc-sdk-ng-fake
 
+## [1.0.13](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.12...v1.0.13) (2024-08-07)
+
+### Features
+
+- getMicrophones and getPlaybackDevices ([90d632e](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/commit/90d632eccfe14a5b0189c61c2d790505b8e9552a))
+
 ## [1.0.12](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.11...v1.0.12) (2024-02-22)
 
 ## [1.0.11](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.10...v1.0.11) (2024-02-22)
