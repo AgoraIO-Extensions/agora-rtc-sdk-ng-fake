@@ -1,5 +1,11 @@
 # agora-rtc-sdk-ng-fake
 
+## [1.0.14](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.13...v1.0.14) (2025-04-18)
+
+### Features
+
+- add client.enableAudioVolumeIndicator() ([007fbbb](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/commit/007fbbb142c72e473a8694ea64419027e91a631a))
+
 ## [1.0.13](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.12...v1.0.13) (2024-08-07)
 
 ### Features
