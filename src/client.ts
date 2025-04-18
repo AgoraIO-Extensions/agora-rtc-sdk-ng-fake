@@ -185,4 +185,8 @@ export class FakeRTCClient extends FakeAgoraEventEmitter {
   public sendStreamMessage(): void {
     //
   }
+
+  public enableAudioVolumeIndicator(): void {
+    //
+  }
 }
