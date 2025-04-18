@@ -43,7 +43,7 @@ jobs:
           npm publish --no-git-checks
 
       - name: Upload Artifact ⬆️
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: agora-rtc-sdk-ng-fake.tar.gz
           path: agora-rtc-sdk-ng-fake.tar.gz
