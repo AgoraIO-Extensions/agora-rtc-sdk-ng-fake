@@ -1,5 +1,11 @@
 # agora-rtc-sdk-ng-fake
 
+## [1.0.15](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.14...v1.0.15) (2025-07-22)
+
+### Features
+
+- add setRemoteVideoStreamType and sendCustomReportMessage ([1e9081c](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/commit/1e9081ca5464e5a1eb9da94931d02f88c8cb40d2))
+
 ## [1.0.14](https://github.com/AgoraIO-Extensions/agora-rtc-sdk-ng-fake/compare/v1.0.13...v1.0.14) (2025-04-18)
 
 ### Features
