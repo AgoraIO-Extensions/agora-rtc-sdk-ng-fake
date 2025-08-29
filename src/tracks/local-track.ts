@@ -109,5 +109,5 @@ export class FakeLocalTrack extends FakeTrack {
 
   public muted: boolean;
 
-  public enabled: boolean;
+  public enabled = true;
 }
